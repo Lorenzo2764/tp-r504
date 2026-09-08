@@ -1,8 +1,12 @@
 import fonctions as f
 
-
 while True:
-	a = int(input("nb a: "))
-	b = int(input("nb b: "))
-	rest = f.puissance(a,b)
-	print(rest)
+	a = input("nb a: ")
+	b = input("nb b: ")
+	try:
+		a = int(a)
+		b = int(b)
+	except ValueError:
+		pass
+	res = f.puissance(a,b)
+	print(res)
