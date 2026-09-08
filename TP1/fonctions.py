@@ -5,4 +5,8 @@ def puissance(a,b):
 		raise TypeError("Nombre entiers seulement")
 	if b < 0:
 		raise Exception("Exposant negatif non supporte")
-	return a**b
+	
+	resultat = 1
+	for i in range(b):
+		resultat = resultat * a
+	return resultat
